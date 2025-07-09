@@ -25,10 +25,10 @@ JWT_ALGORITHM = "HS256"
 
 app = FastAPI(title="Xalvion - Advanced Chat System", version="1.0.0")
 
-# CORS setup — FIXED FOR NETLIFY ONLY
+# CORS setup — allow Netlify frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://xalvion.netlify.app"],  # ✅ Only allow your Netlify frontend
+    allow_origins=["https://xalvion.netlify.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
