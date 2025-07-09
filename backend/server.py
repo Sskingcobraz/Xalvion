@@ -13,6 +13,8 @@ import jwt
 import bcrypt
 from websockets.exceptions import ConnectionClosed
 from bson import json_util
+from fastapi.middleware.cors import CORSMiddleware
+
 
 # Database setup
 MONGO_URL = os.environ.get('MONGO_URL', 'mongodb://localhost:27017')
